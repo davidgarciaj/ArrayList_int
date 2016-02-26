@@ -72,18 +72,18 @@ public class ArrayListInt
         }
         return exist;
     }
-    
+
     /**
      * Devuelve el elemento en la posición indicada
      * @param index posición en la que se encuentra el elemento
      * @returm elemento que se encuentra en dicha posición, de no haberlo devuelve -1
      */
     public int get(int index){
-     int aux = -1;
-     if(index < enteros.length){ aux = enteros[index];}
-     return aux;
+        int aux = -1;
+        if(index < enteros.length){ aux = enteros[index];}
+        return aux;
     }
-    
+
     /**
      * Change the value of object in the indicate position
      * @param index position of the object
@@ -93,5 +93,20 @@ public class ArrayListInt
         if(index <= enteros.length){
             enteros[index] = elemento;
         }
+    }    
+
+    /**
+     * Devuelve el elemento en la posición indicada
+     * @returm elemento que se encuentra en dicha posición, de no haberlo devuelve -1
+     */
+    public int indexOf(int elemento){
+        boolean exist = false;
+        int cont = 0;
+        while(cont < enteros.length && !exist){
+            if(enteros[cont] == elemento){exist = true;}
+            cont++;
+        }
+        if(cont == enteros.length){cont = 0;}
+        return (cont - 1);
     }
 }
