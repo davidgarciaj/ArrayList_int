@@ -109,4 +109,16 @@ public class ArrayListInt
         if(cont == enteros.length){cont = 0;}
         return (cont - 1);
     }
+
+    /**
+     * Indica si existe un elemento en esa posición
+     * @return devuelve true si encuentra elementos en la lista
+     */
+    public boolean isEmpy(){
+        boolean exist = false;
+            if(enteros.length > 0){exist = true;}       
+        return exist;
+    }
+    
+    
 }
