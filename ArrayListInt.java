@@ -50,21 +50,25 @@ public class ArrayListInt
             enteros = aux;
         }
     }
-    
+
     /**
      * Limpia de objetos el arrayList
      */
     public void clear(){
         enteros =  new int[0];
     }
-    
+
     /**
      * Indica si existe un elemento en esa posición
      * @param elemento número del que se desea saber si existe
      */
     public boolean contains(int elemento){
         boolean exist = false;
-        if(elemento < enteros.length){exist = true;}
+        int cont = 0;
+        while(cont < enteros.length && !exist){
+            if(enteros[cont] == elemento){exist = true;}
+            cont++;
+        }
         return exist;
     }
 }
