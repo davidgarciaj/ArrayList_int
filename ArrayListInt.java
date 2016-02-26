@@ -83,4 +83,15 @@ public class ArrayListInt
      if(index < enteros.length){ aux = enteros[index];}
      return aux;
     }
+    
+    /**
+     * Change the value of object in the indicate position
+     * @param index position of the object
+     * @param elemento the value of the object
+     */
+    public void set(int index,int elemento){
+        if(index <= enteros.length){
+            enteros[index] = elemento;
+        }
+    }
 }
