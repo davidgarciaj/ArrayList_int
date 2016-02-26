@@ -61,6 +61,7 @@ public class ArrayListInt
     /**
      * Indica si existe un elemento en esa posición
      * @param elemento número del que se desea saber si existe
+     * @return devuelve true si encuentra una coincidencia, sino devuelbe false
      */
     public boolean contains(int elemento){
         boolean exist = false;
@@ -70,5 +71,16 @@ public class ArrayListInt
             cont++;
         }
         return exist;
+    }
+    
+    /**
+     * Devuelve el elemento en la posición indicada
+     * @param index posición en la que se encuentra el elemento
+     * @returm elemento que se encuentra en dicha posición, de no haberlo devuelve -1
+     */
+    public int get(int index){
+     int aux = -1;
+     if(index < enteros.length){ aux = enteros[index];}
+     return aux;
     }
 }
