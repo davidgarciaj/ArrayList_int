@@ -114,11 +114,39 @@ public class ArrayListInt
      * Indica si existe un elemento en esa posición
      * @return devuelve true si encuentra elementos en la lista
      */
-    public boolean isEmpy(){
+    public boolean isEmpty(){
         boolean exist = false;
             if(enteros.length > 0){exist = true;}       
         return exist;
+    }    
+
+    /**
+     * Devuelve el elemento en la posición indicada
+     * @returm elemento que se encuentra en dicha posición, de no haberlo devuelve -1
+     */
+    public int remove(int index){
+        boolean exist = false;
+        int rem = get(index);
+        if(rem != -1){
+            int[] aux = new int[enteros.length - 1];
+            int cont2 = 0;
+            for(int cont = 0; cont < enteros.length-1; cont++){
+                if(cont == index){
+                    cont++;
+                }
+                aux[cont] = enteros[cont2];
+                cont2++;
+            }
+            enteros = aux;
+        }
+        return rem ;
     }
     
+    /**
+     * Devuelve el tamaño total del array
+     */
+    public int size(){
+        return enteros.length;
+    }
     
 }
